@@ -313,7 +313,7 @@ require('lazy').setup({
         { '<leader>r', group = '[R]ename' },
         { '<leader>s', group = '[S]earch' },
         { '<leader>w', group = '[W]orkspace' },
-        { '<leader>t', group = '[T]oggle' },
+        { '<leader>T', group = '[T]oggle' },
         { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
       },
     },
@@ -772,7 +772,7 @@ require('lazy').setup({
           -- Accept ([y]es) the completion.
           --  This will auto-import if your LSP supports it.
           --  This will expand snippets if the LSP sent a snippet.
-          ['<C-y>'] = cmp.mapping.confirm { select = true },
+          ['<enter>'] = cmp.mapping.confirm { select = true },
 
           -- If you prefer more traditional completion keymaps,
           -- you can uncomment the following lines
@@ -928,6 +928,15 @@ require('lazy').setup({
         vim.keymap.set('n', '<C-S-N>', function()
           harpoon:list():next()
         end)
+    -- amongst your other plugins
+    {
+      'akinsho/toggleterm.nvim',
+      version = '*',
+      config = function()
+        require('toggleterm').setup {
+          open_mapping = [[<leader>tt]], -- Sets the hotkey to "Leader + t"
+          direction = 'float',
+        }
       end,
     },
     -- There are additional nvim-treesitter modules that you can use to interact
