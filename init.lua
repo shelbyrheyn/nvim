@@ -932,6 +932,14 @@ require('lazy').setup({
         require('toggleterm').setup {
           open_mapping = [[<leader>tt]], -- Sets the hotkey to "Leader + t"
           direction = 'float',
+          float_opts = {
+            width = function()
+              return math.floor(vim.o.columns * 0.95)
+            end,
+            height = function()
+              return math.floor(vim.o.lines * 0.9)
+            end,
+          },
         }
       end,
     },
