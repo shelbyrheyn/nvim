@@ -74,6 +74,23 @@ vim.g.maplocalleader = ' '
 -- Set to true for Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
 
+-- NOTE: Some options suggested by the primeagen: START
+--
+-- Tab options
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+vim.opt.smartindent = true
+vim.opt.wrap = false
+
+-- Term Gui Colors
+vim.opt.termguicolors = true
+
+-- Increase update time
+vim.opt.updatetime = 50
+
+-- NOTE: Some options suggested by the primeagen: END
 
 -- Make line numbers default
 vim.opt.number = true
