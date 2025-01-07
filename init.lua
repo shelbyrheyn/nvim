@@ -907,7 +907,7 @@ require('lazy').setup({
         vim.keymap.set('n', '<leader>a', function()
           harpoon:list():add()
         end)
-        vim.keymap.set('n', '<C-e>', function()
+        vim.keymap.set('n', '<leader>t', function()
           harpoon.ui:toggle_quick_menu(harpoon:list())
         end)
         vim.keymap.set('n', '<leader>q', function()
@@ -922,12 +922,8 @@ require('lazy').setup({
         vim.keymap.set('n', '<leader>r', function()
           harpoon:list():select(4)
         end)
-        vim.keymap.set('n', '<C-S-P>', function()
-          harpoon:list():prev()
-        end)
-        vim.keymap.set('n', '<C-S-N>', function()
-          harpoon:list():next()
-        end)
+      end,
+    },
     -- amongst your other plugins
     {
       'akinsho/toggleterm.nvim',
